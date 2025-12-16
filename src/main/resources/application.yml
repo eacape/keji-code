@@ -1,0 +1,66 @@
+# AI 模型配置
+# 支持的提供商: anthropic, openai, dashscope(阿里百炼), deepseek, custom(自定义)
+#ai:
+#  model:
+#    provider: anthropic
+#    name: claude-3-5-sonnet-20241022
+#    api:
+#      key: ${ANTHROPIC_API_KEY}
+#    temperature: 0.7
+#    max:
+#      tokens: 4096
+#    # 自定义模型 API 端点 (当 provider=custom 时使用)
+#    custom:
+#      url: ""
+#      headers: ""
+
+# === 阿里百炼 (DashScope) 配置示例 ===
+ai:
+  model:
+    provider: dashscope
+    name: qwen-max
+    api:
+      key: sk-**************4573
+    temperature: 0.7
+    max:
+      tokens: 8192
+
+# === OpenAI 配置示例 ===
+# ai:
+#   model:
+#     provider: openai
+#     name: gpt-4-turbo-preview
+#     api:
+#       key: ${OPENAI_API_KEY}
+
+# === DeepSeek 配置示例 ===
+# ai:
+#   model:
+#     provider: deepseek
+#     name: deepseek-chat
+#     api:
+#       key: ${DEEPSEEK_API_KEY}
+
+# === 自定义 API 配置示例 ===
+# ai:
+#   model:
+#     provider: custom
+#     name: custom-model
+#     api:
+#       key: your-api-key
+#     custom:
+#       url: https://your-api-endpoint.com/v1/chat/completions
+#       headers: '{"Authorization":"Bearer ${API_KEY}"}'
+
+# 应用程序设置
+app:
+  name: KejiCode
+  version: 1.0.0
+  working:
+    directory: D:\eacape\keji-book-system
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.kejicode: DEBUG
